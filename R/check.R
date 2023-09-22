@@ -70,28 +70,28 @@ checkSameLength <- function(...) {
 #' colnames(pca3) <- paste0("PC_", 1:ncol(pca3))
 #'
 #' # Error: The Dim 2 of exp1 is not aligned with the Dim 2 of exp2!
-#' \dontrun{checkAlignedDims(exp2, exp1, c(1, 2))}
+#' try(checkAlignedDims(exp2, exp1, c(1, 2)))
 #' 
 #' checkAlignedDims(exp3, exp1, c(1, 2))
 #' 
 #' # Error: The Dim 1 of exp3 is not aligned with the Dim 1 of exp1!
-#' \dontrun{checkAlignedDims(exp3, exp1, c(1, 2), withDimnames = TRUE)}
+#' try(checkAlignedDims(exp3, exp1, c(1, 2), withDimnames = TRUE))
 #'
 #' checkAlignedDims(exp3, exp1, c(NA, 2)) # Don't check the rows of exp3
 #' 
 #' # Error: The Dim 2 of exp3 is not aligned with the Dim 2 of exp1!
-#' \dontrun{checkAlignedDims(exp3, exp1, c(NA, 2), withDimnames = TRUE)}
+#' try(checkAlignedDims(exp3, exp1, c(NA, 2), withDimnames = TRUE))
 #'
 #' # Error: The Dim 1 of pca1 is not aligned with the Dim 2 of exp1!
 #' # Don't check the columns of pca1
-#' \dontrun{checkAlignedDims(pca1, exp1, c(2, NA))}
+#' try(checkAlignedDims(pca1, exp1, c(2, NA)))
 #' 
 #' checkAlignedDims(pca2, exp1, c(2, NA))
 #' checkAlignedDims(pca2, exp1, c(2, NA), withDimnames = TRUE)
 #' checkAlignedDims(pca3, exp1, c(2, NA))
 #' 
 #' # Error: The Dim 1 of pca3 is not aligned with the Dim 2 of exp1!
-#' \dontrun{checkAlignedDims(pca3, exp1, c(2, NA), withDimnames = TRUE)}
+#' try(checkAlignedDims(pca3, exp1, c(2, NA), withDimnames = TRUE))
 #' 
 #' 
 #' @export
